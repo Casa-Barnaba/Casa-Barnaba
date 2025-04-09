@@ -151,52 +151,181 @@
     <p>© 2025 Casa Barnaba - Tutti i diritti riservati</p>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-  <script>
-    const translations = {
-      en: {
-        title: "Casa Barnaba",
-        subtitle: "Your ideal retreat among nature, relaxation and adventure in the Modenese Apennines",
-        house_title: "🏠 The House",
-        feature1: "4 double bedrooms (8 beds)",
-        feature2: "Equipped kitchen",
-        feature3: "Outdoor area with barbecue",
-        feature4: "Bathroom with shower and hairdryer",
-        feature5: "Wi-Fi connection and heating",
-        feature6: "Private parking",
-        feature7: "First floor, accessible via stairs",
-        feature8: "Small pets allowed",
-        feature9: "Completely renovated",
-        location_title: "📍 Location & Surroundings",
-        location_desc: "The house is in a quiet, easily accessible area...",
-        loc1: "15 minutes from Pievepelago",
-        loc2: "20 minutes from Fiumalbo",
-        loc3: "30 minutes from Lago Santo Modenese",
-        loc4: "30 minutes from ski resorts",
-        activities_title: "🏞 Activities nearby",
-        act1: "🚴‍♀️ E-bike rental",
-        act2: "🥾 Hiking and trekking",
-        act3: "🏕 Mountain refuge",
-        act4: "🏊🏻‍♀️ Outdoor public pool",
-        act5: "❄️ Winter sports",
-        why_title: "✅ Why Choose Us",
-        why1: "Large spaces ideal for groups or families",
-        why2: "Immersed in nature",
-        why3: "Perfect base for every activity",
-        gallery_title: "Gallery",
-        contact_title: "Contacts"
+<script>
+  const translations = {
+    en: {
+      title: "Casa Barnaba",
+      subtitle: "Your ideal retreat among nature, relaxation and adventure in the Modenese Apennines",
+      house_title: "🏠 The House",
+      feature1: "4 double bedrooms (8 beds)",
+      feature2: "Equipped kitchen",
+      feature3: "Outdoor area with barbecue",
+      feature4: "Bathroom with shower and hairdryer",
+      feature5: "Wi-Fi connection and heating",
+      feature6: "Private parking",
+      feature7: "First floor, accessible via stairs",
+      feature8: "Small pets allowed",
+      feature9: "Completely renovated",
+      location_title: "📍 Location & Surroundings",
+      location_desc: "The house is in a quiet, easily accessible area...",
+      loc1: "15 minutes from Pievepelago",
+      loc2: "20 minutes from Fiumalbo",
+      loc3: "30 minutes from Lago Santo Modenese",
+      loc4: "30 minutes from ski resorts",
+      activities_title: "🏞 Activities nearby",
+      act1: "🚴‍♀️ E-bike rental",
+      act2: "🥾 Hiking and trekking",
+      act3: "🏕 Mountain refuge",
+      act4: "🏊🏻‍♀️ Outdoor public pool",
+      act5: "❄️ Winter sports",
+      why_title: "✅ Why Choose Us",
+      why1: "Large spaces ideal for groups or families",
+      why2: "Immersed in nature",
+      why3: "Perfect base for every activity",
+      gallery_title: "Gallery",
+      contact_title: "Contacts"
+    },
+    es: {
+      title: "Casa Barnaba",
+      subtitle: "Tu refugio ideal entre naturaleza, relax y aventura en los Apeninos de Módena",
+      house_title: "🏠 La Casa",
+      feature1: "4 habitaciones dobles (8 plazas)",
+      feature2: "Cocina equipada",
+      feature3: "Zona exterior con barbacoa",
+      feature4: "Baño con ducha y secador de pelo",
+      feature5: "Conexión Wi-Fi y calefacción",
+      feature6: "Aparcamiento privado",
+      feature7: "Primera planta, accesible por escaleras",
+      feature8: "Se admiten mascotas pequeñas",
+      feature9: "Totalmente renovada",
+      location_title: "📍 Ubicación y alrededores",
+      location_desc: "La casa se encuentra en una zona tranquila y de fácil acceso...",
+      loc1: "15 minutos de Pievepelago",
+      loc2: "20 minutos de Fiumalbo",
+      loc3: "30 minutos del Lago Santo Modenese",
+      loc4: "30 minutos de estaciones de esquí",
+      activities_title: "🏞 Actividades cercanas",
+      act1: "🚴‍♀️ Alquiler de bicicletas eléctricas",
+      act2: "🥾 Senderismo y excursiones",
+      act3: "🏕 Refugio de montaña",
+      act4: "🏊🏻‍♀️ Piscina pública al aire libre",
+      act5: "❄️ Deportes de invierno",
+      why_title: "✅ Por qué elegirnos",
+      why1: "Espacios amplios ideales para grupos o familias",
+      why2: "Rodeada de naturaleza",
+      why3: "Base perfecta para cualquier actividad",
+      gallery_title: "Galería",
+      contact_title: "Contactos"
+    },
+    fr: {
+      title: "Casa Barnaba",
+      subtitle: "Votre refuge idéal entre nature, détente et aventure dans les Apennins Modénais",
+      house_title: "🏠 La Maison",
+      feature1: "4 chambres doubles (8 couchages)",
+      feature2: "Cuisine équipée",
+      feature3: "Espace extérieur avec barbecue",
+      feature4: "Salle de bain avec douche et sèche-cheveux",
+      feature5: "Connexion Wi-Fi et chauffage",
+      feature6: "Parking privé",
+      feature7: "Premier étage accessible par escalier",
+      feature8: "Animaux de petite taille acceptés",
+      feature9: "Entièrement rénovée",
+      location_title: "📍 Emplacement et environs",
+      location_desc: "La maison se trouve dans un endroit calme et facilement accessible...",
+      loc1: "15 minutes de Pievepelago",
+      loc2: "20 minutes de Fiumalbo",
+      loc3: "30 minutes du Lago Santo Modenese",
+      loc4: "30 minutes des stations de ski",
+      activities_title: "🏞 Activités à proximité",
+      act1: "🚴‍♀️ Location de vélos électriques",
+      act2: "🥾 Randonnée et trekking",
+      act3: "🏕 Refuge de montagne",
+      act4: "🏊🏻‍♀️ Piscine municipale en plein air",
+      act5: "❄️ Sports d’hiver",
+      why_title: "✅ Pourquoi nous choisir",
+      why1: "Grands espaces adaptés aux groupes ou familles",
+      why2: "En pleine nature",
+      why3: "Base idéale pour toutes les activités",
+      gallery_title: "Galerie",
+      contact_title: "Contacts"
+    },
+    de: {
+      title: "Casa Barnaba",
+      subtitle: "Ihr idealer Rückzugsort inmitten von Natur, Erholung und Abenteuer im Modeneser Apennin",
+      house_title: "🏠 Das Haus",
+      feature1: "4 Doppelzimmer (8 Betten)",
+      feature2: "Ausgestattete Küche",
+      feature3: "Außenbereich mit Grill",
+      feature4: "Badezimmer mit Dusche und Haartrockner",
+      feature5: "WLAN-Verbindung und Heizung",
+      feature6: "Privater Parkplatz",
+      feature7: "Erstes Stockwerk, über Treppe erreichbar",
+      feature8: "Kleine Haustiere erlaubt",
+      feature9: "Komplett renoviert",
+      location_title: "📍 Lage und Umgebung",
+      location_desc: "Das Haus befindet sich in einer ruhigen, gut erreichbaren Gegend...",
+      loc1: "15 Minuten von Pievepelago",
+      loc2: "20 Minuten von Fiumalbo",
+      loc3: "30 Minuten vom Lago Santo Modenese",
+      loc4: "30 Minuten von Skigebieten",
+      activities_title: "🏞 Aktivitäten in der Nähe",
+      act1: "🚴‍♀️ E-Bike-Verleih",
+      act2: "🥾 Wandern und Trekking",
+      act3: "🏕 Berghütte",
+      act4: "🏊🏻‍♀️ Öffentliches Freibad",
+      act5: "❄️ Wintersport",
+      why_title: "✅ Warum uns wählen",
+      why1: "Großzügige Räume für Gruppen oder Familien",
+      why2: "Inmitten der Natur",
+      why3: "Perfekte Basis für alle Aktivitäten",
+      gallery_title: "Galerie",
+      contact_title: "Kontakt"
+    },
+    ru: {
+      title: "Casa Barnaba",
+      subtitle: "Идеальное место для отдыха среди природы, уединения и приключений в Апеннинах Модены",
+      house_title: "🏠 Дом",
+      feature1: "4 двухместные спальни (8 спальных мест)",
+      feature2: "Оборудованная кухня",
+      feature3: "Зона на открытом воздухе с барбекю",
+      feature4: "Ванная с душем и феном",
+      feature5: "Wi-Fi и отопление",
+      feature6: "Частная парковка",
+      feature7: "Первый этаж, доступ по лестнице",
+      feature8: "Разрешены маленькие животные",
+      feature9: "Полностью отремонтирован",
+      location_title: "📍 Расположение и окрестности",
+      location_desc: "Дом расположен в тихом и легкодоступном месте...",
+      loc1: "15 минут от Пьевепелаго",
+      loc2: "20 минут от Фьюмальбо",
+      loc3: "30 минут от озера Санто Моденезе",
+      loc4: "30 минут до лыжных курортов",
+      activities_title: "🏞 Активности рядом",
+      act1: "🚴‍♀️ Прокат электровелосипедов",
+      act2: "🥾 Пешие прогулки и походы",
+      act3: "🏕 Горное убежище",
+      act4: "🏊🏻‍♀️ Открытый муниципальный бассейн",
+      act5: "❄️ Зимние виды спорта",
+      why_title: "✅ Почему выбрать нас",
+      why1: "Просторные помещения для семей и групп",
+      why2: "В окружении природы",
+      why3: "Идеальная база для всех видов отдыха",
+      gallery_title: "Галерея",
+      contact_title: "Контакты"
+    }
+  };
+
+  const switcher = document.getElementById("languageSwitcher");
+  switcher.addEventListener("change", () => {
+    const lang = switcher.value;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
       }
-      // Altre lingue possono essere aggiunte qui
-    };
-    const switcher = document.getElementById("languageSwitcher");
-    switcher.addEventListener("change", () => {
-      const lang = switcher.value;
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
