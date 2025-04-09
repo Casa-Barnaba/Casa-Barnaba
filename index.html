@@ -1,41 +1,332 @@
+Hai detto:
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ale Marziano</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Barnaba</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #f8f4ee;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #6a4e3a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .lang-select {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #c2b280;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li::before {
+      content: "\2022";
+      color: #6a4e3a;
+      display: inline-block;
+      width: 1em;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 480px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    footer {
+      background: #6a4e3a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    a {
+      color: #6a4e3a;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Ale Marziano</h1>
-        <p>Studente di economia con spirito imprenditoriale</p>
-        <nav>
-            <ul>
-                <li><a href="#about">Chi sono</a></li>
-                <li><a href="#projects">Progetti</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>Chi sono</h2>
-        <p>Mi chiamo Ale Marziano e studio economia. Sono appassionato di business, startup e innovazione. Credo nel valore dell'iniziativa e nella forza delle idee semplici ma efficaci.</p>
-    </section>
-    <section id="projects">
-        <h2>Progetti</h2>
-        <ul>
-            <li><strong>Startup Simulata:</strong> Business model per un'app di delivery eco-sostenibile.</li>
-            <li><strong>Analisi Mercato:</strong> Studio sulla penetrazione dei servizi fintech tra i giovani.</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contatti</h2>
-        <p>Email: <a href="mailto:alemarziano@email.com">alemarziano@email.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/alemarziano" target="_blank">Ale Marziano</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Ale Marziano</p>
-    </footer>
+  <header>
+    <div class="lang-select">
+      <select id="languageSwitcher">
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="ru">🇷🇺 Русский</option>
+      </select>
+    </div>
+    <h1 data-i18n="title">Casa Barnaba</h1>
+    <p data-i18n="subtitle">Il tuo rifugio ideale tra natura, relax e avventura sull’Appennino Modenese</p>
+  </header>
+  <div class="container">
+    <h2 data-i18n="house_title">🏠 La casa </h2>
+    <ul>
+      <li data-i18n="feature1">4 camere matrimoniali (8 posti letto)</li>
+      <li data-i18n="feature2">Cucina attrezzata</li>
+      <li data-i18n="feature3">Spazio esterno con barbecue</li>
+      <li data-i18n="feature4">Bagno con doccia e asciugacapelli</li>
+      <li data-i18n="feature5">Connessione Wi-Fi e riscaldamento </li>
+      <li data-i18n="feature6">Parcheggio privato</li>
+      <li data-i18n="feature7">Primo piano, accessibile tramite scale</li>
+      <li data-i18n="feature8">Animali di piccola taglia ammessi</li>
+      <li data-i18n="feature9">Completamente ristrutturata</li>
+    </ul>
+    <h2 data-i18n="location_title">📍 Posizione e dintorni </h2>
+    <p data-i18n="location_desc">La casa si trova in una zona tranquilla e facilmente accessibile...</p>
+    <ul>
+      <li data-i18n="loc1">15 minuti da Pievepelago</li>
+      <li data-i18n="loc2">20 minuti da Fiumalbo</li>
+      <li data-i18n="loc3">30 minuti da Lago Santo Modenese</li>
+      <li data-i18n="loc4">30 minuti da impianti sciistici</li>
+    </ul>
+    <h2 data-i18n="activities_title">🏞 Attività nelle vicinanze </h2>
+    <ul>
+      <li data-i18n="act1">🚴‍♀️ Noleggio bici elettriche</li>
+      <li data-i18n="act2">🥾 Trekking ed escursioni</li>
+      <li data-i18n="act3">🏕 Rifugio in quota </li>
+      <li data-i18n="act4">🏊🏻‍♀️ Piscina Comunale all’aperto</li>
+      <li data-i18n="act5">❄️ Sport invernali</li>
+    </ul>
+    <h2 data-i18n="why_title">✅ Perché sceglierci</h2>
+    <ul>
+      <li data-i18n="why1">Spazi ampi e adatti a gruppi o famiglie</li>
+      <li data-i18n="why2">Immersa nella natura</li>
+      <li data-i18n="why3">Base perfetta per ogni attività</li>
+    </ul>
+    <h2 data-i18n="gallery_title">Galleria</h2>
+    <div class="gallery">
+    <a href="1.JPG" data-lightbox="casa" data-title="Casa Barnaba - Esterno"><img src="1.JPG"></a>
+    <a href="2.JPG" data-lightbox="casa" data-title="Casa Barnaba - Esterno"><img src="2.JPG"></a>
+    <a href="3.JPG" data-lightbox="casa" data-title="Casa Barnaba - Esterno"><img src="3.JPG"></a>
+    <a href="4.JPG" data-lightbox="casa" data-title="Casa Barnaba - Esterno"><img src="4.JPG"></a>
+    <a href="5.JPG" data-lightbox="casa" data-title="Casa Barnaba - Esterno"><img src="5.JPG"></a>
+    <a href="6.JPG" data-lightbox="casa" data-title="Casa Barnaba - Esterno"><img src="6.JPG"></a>
+    <a href="7.JPG" data-lightbox="casa" data-title="Casa Barnaba - Ingresso"><img src="7.JPG"></a>
+    <a href="8.JPG" data-lightbox="casa" data-title="Casa Barnaba - Salotto"><img src="8.JPG"></a>
+    <a href="9.JPG" data-lightbox="casa" data-title="Casa Barnaba - Cucina"><img src="9.JPG"></a>
+    <a href="10.JPG" data-lightbox="casa" data-title="Casa Barnaba - Cucina"><img src="10.JPG"></a>
+    <a href="11.JPG" data-lightbox="casa" data-title="Casa Barnaba - Cucina"><img src="11.JPG"></a>
+    <a href="12.JPG" data-lightbox="casa" data-title="Casa Barnaba - Panorama"><img src="12.JPG"></a>
+    <a href="13.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 1"><img src="13.JPG"></a>
+    <a href="14.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 1"><img src="14.JPG"></a>
+    <a href="15.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 2"><img src="15.JPG"></a>
+    <a href="16.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 2"><img src="16.JPG"></a>
+    <a href="17.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 3"><img src="17.JPG"></a>
+    <a href="18.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 3"><img src="18.JPG"></a>
+    <a href="19.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 4"><img src="19.JPG"></a>
+    <a href="20.JPG" data-lightbox="casa" data-title="Casa Barnaba - Camera 4"><img src="20.JPG"></a>
+    <a href="21.JPG" data-lightbox="casa" data-title="Casa Barnaba - Bagno"><img src="21.JPG"></a> </div>
+    <h2 data-i18n="contact_title">Contatti</h2>
+    <p><strong>📍 Indirizzo:</strong> <a href="#">44°12'04.2"N 10°33'22.6"E</a></p>
+    <p><strong>☎️  Telefono:</strong> <a href="tel:+393474979912">347 4979912</a></p>
+    <p><strong>💌 Email:</strong> <a href="mailto:Casa.Barnaba@outlook.it">Casa.Barnaba@outlook.it</a></p>
+  </div>
+  <footer>
+    <p>© 2025 Casa Barnaba - Tutti i diritti riservati</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script>
+  const translations = {
+    en: {
+      title: "Casa Barnaba",
+      subtitle: "Your ideal retreat among nature, relaxation and adventure in the Modenese Apennines",
+      house_title: "🏠 The House",
+      feature1: "4 double bedrooms (8 beds)",
+      feature2: "Equipped kitchen",
+      feature3: "Outdoor area with barbecue",
+      feature4: "Bathroom with shower and hairdryer",
+      feature5: "Wi-Fi connection and heating",
+      feature6: "Private parking",
+      feature7: "First floor, accessible via stairs",
+      feature8: "Small pets allowed",
+      feature9: "Completely renovated",
+      location_title: "📍 Location & Surroundings",
+      location_desc: "The house is in a quiet, easily accessible area...",
+      loc1: "15 minutes from Pievepelago",
+      loc2: "20 minutes from Fiumalbo",
+      loc3: "30 minutes from Lago Santo Modenese",
+      loc4: "30 minutes from ski resorts",
+      activities_title: "🏞 Activities nearby",
+      act1: "🚴‍♀️ E-bike rental",
+      act2: "🥾 Hiking and trekking",
+      act3: "🏕 Mountain refuge",
+      act4: "🏊🏻‍♀️ Outdoor public pool",
+      act5: "❄️ Winter sports",
+      why_title: "✅ Why Choose Us",
+      why1: "Large spaces ideal for groups or families",
+      why2: "Immersed in nature",
+      why3: "Perfect base for every activity",
+      gallery_title: "Gallery",
+      contact_title: "Contacts"
+    },
+    es: {
+      title: "Casa Barnaba",
+      subtitle: "Tu refugio ideal entre naturaleza, relax y aventura en los Apeninos de Módena",
+      house_title: "🏠 La Casa",
+      feature1: "4 habitaciones dobles (8 plazas)",
+      feature2: "Cocina equipada",
+      feature3: "Zona exterior con barbacoa",
+      feature4: "Baño con ducha y secador de pelo",
+      feature5: "Conexión Wi-Fi y calefacción",
+      feature6: "Aparcamiento privado",
+      feature7: "Primera planta, accesible por escaleras",
+      feature8: "Se admiten mascotas pequeñas",
+      feature9: "Totalmente renovada",
+      location_title: "📍 Ubicación y alrededores",
+      location_desc: "La casa se encuentra en una zona tranquila y de fácil acceso...",
+      loc1: "15 minutos de Pievepelago",
+      loc2: "20 minutos de Fiumalbo",
+      loc3: "30 minutos del Lago Santo Modenese",
+      loc4: "30 minutos de estaciones de esquí",
+      activities_title: "🏞 Actividades cercanas",
+      act1: "🚴‍♀️ Alquiler de bicicletas eléctricas",
+      act2: "🥾 Senderismo y excursiones",
+      act3: "🏕 Refugio de montaña",
+      act4: "🏊🏻‍♀️ Piscina pública al aire libre",
+      act5: "❄️ Deportes de invierno",
+      why_title: "✅ Por qué elegirnos",
+      why1: "Espacios amplios ideales para grupos o familias",
+      why2: "Rodeada de naturaleza",
+      why3: "Base perfecta para cualquier actividad",
+      gallery_title: "Galería",
+      contact_title: "Contactos"
+    },
+    fr: {
+      title: "Casa Barnaba",
+      subtitle: "Votre refuge idéal entre nature, détente et aventure dans les Apennins Modénais",
+      house_title: "🏠 La Maison",
+      feature1: "4 chambres doubles (8 couchages)",
+      feature2: "Cuisine équipée",
+      feature3: "Espace extérieur avec barbecue",
+      feature4: "Salle de bain avec douche et sèche-cheveux",
+      feature5: "Connexion Wi-Fi et chauffage",
+      feature6: "Parking privé",
+      feature7: "Premier étage accessible par escalier",
+      feature8: "Animaux de petite taille acceptés",
+      feature9: "Entièrement rénovée",
+      location_title: "📍 Emplacement et environs",
+      location_desc: "La maison se trouve dans un endroit calme et facilement accessible...",
+      loc1: "15 minutes de Pievepelago",
+      loc2: "20 minutes de Fiumalbo",
+      loc3: "30 minutes du Lago Santo Modenese",
+      loc4: "30 minutes des stations de ski",
+      activities_title: "🏞 Activités à proximité",
+      act1: "🚴‍♀️ Location de vélos électriques",
+      act2: "🥾 Randonnée et trekking",
+      act3: "🏕 Refuge de montagne",
+      act4: "🏊🏻‍♀️ Piscine municipale en plein air",
+      act5: "❄️ Sports d’hiver",
+      why_title: "✅ Pourquoi nous choisir",
+      why1: "Grands espaces adaptés aux groupes ou familles",
+      why2: "En pleine nature",
+      why3: "Base idéale pour toutes les activités",
+      gallery_title: "Galerie",
+      contact_title: "Contacts"
+    },
+    de: {
+      title: "Casa Barnaba",
+      subtitle: "Ihr idealer Rückzugsort inmitten von Natur, Erholung und Abenteuer im Modeneser Apennin",
+      house_title: "🏠 Das Haus",
+      feature1: "4 Doppelzimmer (8 Betten)",
+      feature2: "Ausgestattete Küche",
+      feature3: "Außenbereich mit Grill",
+      feature4: "Badezimmer mit Dusche und Haartrockner",
+      feature5: "WLAN-Verbindung und Heizung",
+      feature6: "Privater Parkplatz",
+      feature7: "Erstes Stockwerk, über Treppe erreichbar",
+      feature8: "Kleine Haustiere erlaubt",
+      feature9: "Komplett renoviert",
+      location_title: "📍 Lage und Umgebung",
+      location_desc: "Das Haus befindet sich in einer ruhigen, gut erreichbaren Gegend...",
+      loc1: "15 Minuten von Pievepelago",
+      loc2: "20 Minuten von Fiumalbo",
+      loc3: "30 Minuten vom Lago Santo Modenese",
+      loc4: "30 Minuten von Skigebieten",
+      activities_title: "🏞 Aktivitäten in der Nähe",
+      act1: "🚴‍♀️ E-Bike-Verleih",
+      act2: "🥾 Wandern und Trekking",
+      act3: "🏕 Berghütte",
+      act4: "🏊🏻‍♀️ Öffentliches Freibad",
+      act5: "❄️ Wintersport",
+      why_title: "✅ Warum uns wählen",
+      why1: "Großzügige Räume für Gruppen oder Familien",
+      why2: "Inmitten der Natur",
+      why3: "Perfekte Basis für alle Aktivitäten",
+      gallery_title: "Galerie",
+      contact_title: "Kontakt"
+    },
+    ru: {
+      title: "Casa Barnaba",
+      subtitle: "Идеальное место для отдыха среди природы, уединения и приключений в Апеннинах Модены",
+      house_title: "🏠 Дом",
+      feature1: "4 двухместные спальни (8 спальных мест)",
+      feature2: "Оборудованная кухня",
+      feature3: "Зона на открытом воздухе с барбекю",
+      feature4: "Ванная с душем и феном",
+      feature5: "Wi-Fi и отопление",
+      feature6: "Частная парковка",
+      feature7: "Первый этаж, доступ по лестнице",
+      feature8: "Разрешены маленькие животные",
+      feature9: "Полностью отремонтирован",
+      location_title: "📍 Расположение и окрестности",
+      location_desc: "Дом расположен в тихом и легкодоступном месте...",
+      loc1: "15 минут от Пьевепелаго",
+      loc2: "20 минут от Фьюмальбо",
+      loc3: "30 минут от озера Санто Моденезе",
+      loc4: "30 минут до лыжных курортов",
+      activities_title: "🏞 Активности рядом",
+      act1: "🚴‍♀️ Прокат электровелосипедов",
+      act2: "🥾 Пешие прогулки и походы",
+      act3: "🏕 Горное убежище",
+      act4: "🏊🏻‍♀️ Открытый муниципальный бассейн",
+      act5: "❄️ Зимние виды спорта",
+      why_title: "✅ Почему выбрать нас",
+      why1: "Просторные помещения для семей и групп",
+      why2: "В окружении природы",
+      why3: "Идеальная база для всех видов отдыха",
+      gallery_title: "Галерея",
+      contact_title: "Контакты"
+    }
+  };
+
+  const switcher = document.getElementById("languageSwitcher");
+  switcher.addEventListener("change", () => {
+    const lang = switcher.value;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
