@@ -145,10 +145,9 @@
     </div>
     <h2 data-i18n="contact_title">Contatti</h2>
    <ul>
-      <li data-i18n="label_address">📍 Indirizzo: <a href="https://maps.app.goo.gl/4U7Yq3XhSB4R7RH66?g_st=com.google.maps.preview.copy"target="_blank">44°12'04.2"N 10°33'22.6"E</a></li> 
-      <li data-i18n="label_phone">☎️  Telefono:  <a href="tel:+393474979912">347 4979912</a> </li>
-      <li data-i18n="label_email">💌 Email:<a href="mailto:Casa.Barnaba@outlook.it">Casa.Barnaba@outlook.it</a></li> 
-    </ul>
+   <li data-i18n="label_phone" data-i18n-options='{"number": "347 4979912", "tel":"tel:+393474979912"}'></li>
+    <li data-i18n="label_email" data-i18n-options='{"email":"Casa.Barnaba@outlook.it"}'></li>
+    <li data-i18n="label_address" data-i18n-options='{"url":"https://maps.app.goo.gl/4U7Yq3XhSB4R7RH66?g_st=com.google.maps.preview.copy"}'></li></ul>
    </div>
   <footer>
     <p>© 2025 Casa Barnaba - Tutti i diritti riservati</p>
@@ -231,9 +230,9 @@
       img20: "Casa Barnaba - Bedroom 4",
       img21: "Casa Barnaba - Bathroom", 
       contact_title: "Contacts",
-      labeel_address: "📍 Address:",
-      label_phone: "☎️ Number:",
-      label_email: "💌 Email:" 
+      label_address:  "📍 Address: <a href='{{url}}' target='_blank'>Google Maps</a>",
+      label_phone: "☎️ Phone: <a href='{{tel}}'>{{number}}</a>",
+      label_email: "💌 Email: <a href='mailto:{{email}}'>{{email}}</a>" 
     },
     es: {
       title: "Casa Barnaba",
@@ -287,7 +286,7 @@
       img20: "Casa Barnaba - Habitación 4",
       img21: "Casa Barnaba - Baño", 
       contact_title: "Contactos",
-      labeel_address: "📍 Dirección:",
+      label_address: "📍 Dirección:",
       label_phone: "☎️ Teléfono:",
       label_email: "💌 Correo electrónico:"
     },
@@ -343,7 +342,7 @@
       img20: "Casa Barnaba - Chambre 4",
       img21: "Casa Barnaba - Salle de bain", 
       contact_title: "Contacts",
-      labeel_address: "📍 Adresse:",
+      label_address: "📍 Adresse:",
       label_phone: "☎️ Téléphone:",
       label_email: "💌 Email:" 
     },
@@ -399,7 +398,7 @@
       img20: "Casa Barnaba - Schlafzimmer 4",
       img21: "Casa Barnaba - Badezimmer", 
       contact_title: "Kontakt",
-      labeel_address: "📍 Adresse:",
+      label_address: "📍 Adresse:",
       label_phone: "☎️ Telefon:",
       label_email: "💌 E-Mail:" 
     },
@@ -455,7 +454,7 @@
       img20: "Casa Barnaba - Спальня 4",
       img21: "Casa Barnaba - Ванная комната", 
       contact_title: "Контакты",
-      labeel_address: "📍 Адрес:",
+      label_address: "📍 Адрес:",
       label_phone: "☎️ Телефон:",
       label_email: "💌 Эл. почта:" 
     }
